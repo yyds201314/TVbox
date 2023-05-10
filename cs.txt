@@ -1,0 +1,34 @@
+    {
+      "id": "sakura-comic",
+      "sort": 29,
+      "host": "http:\/\/www.yinghuacd.com\/",
+      "name": "樱花动漫",
+      "charset": "utf-8",
+      "summary": "修订日期：2023-05-10",
+      "searchUrl": "search\/{wd}\/?page={pg}",
+      "resListRule": "div.lpic > ul > li",
+      "resNameRule": "h2 > a > @text",
+      "resNoteRule": "span > @index(0) > @text",
+      "resCoverRule": "a > img > @attr(src)",
+      "resDetailUrlRule": "h2 > a > @attr(href)",
+      
+      "detailNameRule": "h1 > @text",
+      "detailDateRule": "div.sinfo > span:nth-child(1) > a > @text",
+      "detailTypeRule": "div.sinfo > span:nth-child(3) > a > @text",
+      "detailAreaRule": "div.sinfo > span:nth-child(2) > a > @text",
+      "detailNoteRule": "div.sinfo > p > @text",
+      "detailCoverRule": "div.thumb.l > img > @attr(src)",
+      "detailDescriptionRule": "div.info > @text",
+      "playRuleEntities": [
+        {
+          "id": "0",
+          "sort": 0,
+          "name": "播放列表",
+          "itemListRule": "div.movurl > ul > li",
+          "itemURLRule": "a > @attr(href)",
+          "itemNameRule": "a > @text",
+          "type": "Regex",
+          "regexURLFinder": "data-vid=\"(.*?)\\$"
+        }
+      ]
+    }
